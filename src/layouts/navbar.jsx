@@ -24,6 +24,14 @@ const Layout = () => {
       <main className="flex-grow p-4 overflow-auto">
         <Outlet />
       </main>
+      <footer className="flex items-center justify-between p-4 border-t bg-background">
+        <div>&copy; 2023 Wars Through History</div>
+        <div className="flex gap-4">
+          <a href="#" className="text-muted-foreground hover:text-foreground">Facebook</a>
+          <a href="#" className="text-muted-foreground hover:text-foreground">Twitter</a>
+          <a href="#" className="text-muted-foreground hover:text-foreground">Instagram</a>
+        </div>
+      </footer>
     </div>
   );
 };
@@ -35,7 +43,7 @@ const DesktopNav = () => (
       className="flex items-center gap-2 text-lg font-semibold md:text-base"
     >
       <Package2 className="h-6 w-6" />
-      <span className="sr-only">Acme Inc</span>
+      <span>Wars Through History</span>
     </NavItem>
     {navItems.map((item) => (
       <NavItem key={item.to} to={item.to}>
@@ -60,7 +68,7 @@ const MobileNav = () => (
           className="flex items-center gap-2 text-lg font-semibold"
         >
           <Package2 className="h-6 w-6" />
-          <span className="sr-only">Acme Inc</span>
+          <span>Wars Through History</span>
         </NavItem>
         {navItems.map((item) => (
           <NavItem key={item.to} to={item.to}>
